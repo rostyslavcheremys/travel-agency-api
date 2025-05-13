@@ -1,0 +1,65 @@
+{
+  "info": {
+    "name": "Travel Agency API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Tours",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/tours?country=Maldives",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tours"],
+          "query": [{ "key": "country", "value": "Maldives" }]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Tour",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json", "type": "text" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"title\": \"Beach Paradise in Maldives\", \"country\": \"Maldives\", \"price\": 1500.00, \"startDate\": \"2025-06-01\", \"endDate\": \"2025-06-07\", \"description\": \"A relaxing beach vacation\", \"hotel\": \"Sunset Resort\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/tours",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tours"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Booking",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json", "type": "text" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"tourId\": 1, \"userId\": 101, \"bookingDate\": \"2025-04-20\", \"numberOfPeople\": 2}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/bookings",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["bookings"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
