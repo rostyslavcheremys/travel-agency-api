@@ -60,6 +60,21 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "Get Bookings",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/bookings",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["bookings"],
+          "query": []
+        }
+      },
+      "response": []
     }
   ]
 }
